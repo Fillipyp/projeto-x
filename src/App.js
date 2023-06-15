@@ -1,25 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
+import { NextUIProvider } from '@nextui-org/react';
+import { Button, Textarea, Grid } from '@nextui-org/react';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <Button color="error">
           Edit <code>src/App.js</code> and save to reload.
-        </p>
+        </Button>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          React
         </a>
+        <Grid.Container gap={2.5} css={{ mt: '4px' }}>
+          <Grid>
+            <Textarea placeholder="Default Textarea" />
+          </Grid>
+          <Grid>
+            <Textarea
+              underlined
+              color="primary"
+              labelPlaceholder="Underlined Textarea"
+            />
+          </Grid>
+          <Grid>
+            <Textarea
+              bordered
+              color="secondary"
+              labelPlaceholder="Bordered Textarea"
+            />
+          </Grid>
+        </Grid.Container>
       </header>
     </div>
   );
-}
+};
 
 export default App;
