@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { NextUIProvider } from '@nextui-org/react';
-import { Button, Textarea, Grid } from '@nextui-org/react';
+import { Button, Textarea, Grid, Link } from '@nextui-org/react';
 
 const App = () => {
   return (
@@ -38,6 +38,9 @@ const App = () => {
             />
           </Grid>
         </Grid.Container>
+        <Link href="https://google.com" color="error">
+          teste
+        </Link>
       </header>
     </div>
   );
